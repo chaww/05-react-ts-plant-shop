@@ -1,6 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import App from "./App"
+import Providers from './Providers'
 
 function Updaters() {
   return (
@@ -12,11 +13,10 @@ function Updaters() {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider>
+    <Providers>
       <Updaters />
       <App />
-    </Provider>
-    <App />
+    </Providers>
   </React.StrictMode>,
   document.getElementById("root")
 )
