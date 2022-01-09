@@ -26,9 +26,48 @@ export interface User {
   username: string;
 }
 
-export interface Message {
-  shop_id: number;
-  user_id: number;
-  owner_id: number;
-  created_timestamp: string;
+export interface CartItem {
+  item_id: number;
+  quantity: number;
+  price: number;
 }
+
+export interface Cart {
+  user_id: number;
+  items: CartItem[];
+}
+
+// ========================================================
+
+export interface Checkout {
+  user_id: number;
+  items: CartItem[];
+  total: number;
+}
+
+export interface OrderItem {
+  order_id: number;
+  item_id: number;
+  quantity: number;
+  price: number;
+}
+
+export interface Order {
+  order_id: number;
+  user_id: number;
+  items: OrderItem[];
+  total: number;
+}
+
+
+
+
+
+
+// export interface Message {
+//   shop_id: number;
+//   user_id: number;
+//   owner_id: number;
+//   created_timestamp: string;
+//   message: string;
+// }
